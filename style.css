@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat',sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+  
+}
+nav{
+  background: white;
+  padding: 5px 40px;
+  position: fixed;
+  width: 100%;
+}
+nav ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+nav ul li{
+  padding: 15px 0;
+  cursor: pointer;
+}
+nav ul li.items{
+  position: relative;
+  width: auto;
+  margin: 0 16px;
+  text-align: center;
+  order: 3;
+}
+nav ul li.items:after{
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 5px;
+  height: 2px;
+  width: 100%;
+  background: rgb(28, 182, 233);
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+nav ul li.items:hover:after{
+  opacity: 1;
+  bottom: 8px;
+}
+nav ul li.logo{
+  flex: 1;
+  color: black;
+  font-size: 23px;
+  font-weight: 600;
+  cursor: default;
+  user-select: none;
+}
+nav ul li a{
+  color: black;
+  font-size: 18px;
+  text-decoration: none;
+  transition: .4s;
+}
+nav ul li:hover a{
+  color: rgb(28, 182, 233);
+}
+nav ul li i{
+  font-size: 23px;
+}
+nav ul li.btn{
+  display: none;
+}
+nav ul li.btn.hide i:before{
+  content: '\f00d';
+}
+
+
+@media (min-width: 858px){
+  .banner_pic{
+    height: 100vh;
+    width: 100%;
+  }
+  .trending_product h1{
+    padding: 20px;
+    text-align: center;
+  }
+  .trending_product_card{
+    display: flex;
+    margin-left: 85px;
+    overflow: hidden;
+  }
+  .first_product img{
+    height: 220px;
+    margin-left: 2%;
+    width: 280px;
+  }
+  .first_product_desc{
+    margin-left: 105px;
+  }
+  .pro_name{
+    font-weight: bold;
+    margin-left: -14%;
+    color: rgb(34, 33, 33);
+  }
+  .rating{
+    margin-left: 2%;
+  }
+  .price p{
+    margin-left: 8%;
+    font-weight: bold;
+    color: rgb(34, 33, 33);
+  }
+
+  .testimonial_card{
+    display: flex;
+    
+    margin-left: 5%;
+  }
+  .first_card{
+    background-color: #D1E2E9;
+    width: 80%;
+  }
+  .testimonial_head{
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .picture img{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    border: white solid;
+    margin-left: 12%;
+    margin-top: 20px;
+    
+  }
+  .desc_testmnl h2{
+    margin-left: 110px;
+    padding: 10px;
+  }
+  .desc_testmnl p{
+    line-height: 1.6;
+    font-size: small;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    
+    
+  }
+  .button {
+    background-color: white;
+    border: solid black;
+    color: rgb(51, 50, 50);
+    border-width: thin;
+    padding: 15px 40px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: 20px;
+    
+  }
+  .second{
+   margin-left: 9%;
+  }
+  .third{
+    margin-left: 3%;
+  }
+
+
+  footer{
+    clear: both;
+    content: '';
+   
+    bottom: 0;
+  }
+  .footer-distributed{
+    background-color: #1b1c1d;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+   
+    padding: 55px 50px;
+  }
+   
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: inline-block;
+    vertical-align: top;
+  }
+   
+  .footer-distributed .footer-left{
+    width: 40%;
+  }
+   
+  .footer-distributed h3{
+    color:  #ffffff;
+    font: normal 36px 'Cookie', cursive;
+    margin: 0;
+  }
+   
+  .footer-distributed h3 span{
+    color:  #5383d3;
+  }
+   
+   
+  .footer-distributed .footer-links{
+    color:  white;
+    margin: 20px 0 12px;
+    padding: 0;
+  }
+   
+  .footer-distributed .footer-links a{
+    line-height: 1.8;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+  }
+   
+  .footer-distributed .footer-company-name{
+    color:  #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+  }
+   
+   
+  .footer-distributed .footer-center{
+    width: 35%;
+  }
+   
+  .footer-distributed .footer-center i{
+    background-color:  #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+  }
+   
+  .footer-distributed .footer-center i.fa-envelope{
+    font-size: 17px;
+    line-height: 38px;
+  }
+   
+  .footer-distributed .footer-center p{
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin:0;
+  }
+   
+  .footer-distributed .footer-center p span{
+    display:block;
+    font-weight: normal;
+    font-size:14px;
+    line-height:2;
+  }
+   
+  .footer-distributed .footer-center p a{
+    color:  #5383d3;
+    text-decoration: none;;
+  }
+   
+  .footer-distributed .footer-right{
+    width: 20%;
+  }
+   
+  .footer-distributed .footer-company-about{
+    line-height: 20px;
+    color:  #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+  }
+   
+  .footer-distributed .footer-company-about span{
+    display: block;
+    color:  #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+   
+  .footer-distributed .footer-icons{
+    margin-top: 25px;
+  }
+   
+  .footer-distributed .footer-icons a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color:  #33383b;
+    border-radius: 2px;
+   
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+   
+    margin-right: 3px;
+    margin-bottom: 5px;
+  }
+
+  
+}
+@media (max-width: 858px){
+  nav{
+    padding: 5px 30px;
+  }
+  nav ul li.items{
+    width: 100%;
+    display: none;
+  }
+  nav ul li.items.show{
+    display: block;
+  }
+  nav ul li.btn{
+    display: block;
+  }
+  nav ul li.items:hover{
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px rgb(28, 182, 233),
+                inset 0 0 10px rgb(28, 182, 233);
+  }
+  nav ul li.items:hover:after{
+    opacity: 0;
+  }
+
+  .banner_pic{
+    float: right;
+  }
+
+  .trending_product{
+    clear: both;
+    content: '';
+  }
+
+  .trending_product h1{
+    padding: 20px;
+    text-align: center;
+  }
+
+  .first_product img{
+    height: 320px;
+    margin-left: 2%;
+    width: 450px;
+  }
+  .first_product_desc{
+    
+    text-align: center;
+  }
+  .pro_name{
+    font-weight: bold;
+    color: rgb(34, 33, 33);
+  }
+  .price p{
+    font-weight: bold;
+    color: rgb(34, 33, 33);
+  }
+  .testimonial_head{
+    text-align: center;
+    padding: 20px;
+  }
+  .first_card img{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    border: white solid;
+    margin-left: 23%;
+    margin-top: 20px;
+    
+  }
+
+  .testimonial_card{
+    background-color: #D1E2E9;
+    width: 100%;
+    
+  }
+  .desc_testmnl h2{
+    text-align: center;
+    padding: 10px;
+  }
+  .desc_testmnl p{
+    width: 85%;
+    margin-left: 10%;
+    line-height: 1.6;
+    font-size: small;
+  }
+  .button {
+    background-color: white;
+    border: solid black;
+    color: rgb(51, 50, 50);
+    border-width: thin;
+    padding: 15px 40px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: 10%;
+    margin-top: 3%;
+    
+  }
+
+
+
+  footer{
+    background-color: #292C2F;
+    margin-bottom: -40px;
+  }
+
+.footer-distributed{
+		font: bold 14px sans-serif;
+	
+	}
+ 
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+ 
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+  }
+
+
+  .footer-links a{
+    color: #5aaceb;
+  }
+  .footer-distributed h3{
+    color:  #ffffff;
+    font: normal 36px 'Cookie', cursive;
+    margin: 0;
+  }
+  .footer-distributed .footer-links{
+    color:  #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+  }
+  .footer-company-name{
+    color: white;
+  }
+
+  .footer-center p{
+    margin-bottom: 10px;
+    color: white;
+  }
+  .footer-icons i{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+    padding: 10px;
+    border-radius: 20%;
+    background-color: black;
+    font-size: 20px;
+  }
+  .footer-company-about{
+    color: white;
+  }
+
+}
+.checked {
+  color: orange;
+}
+hr{
+  margin-top: 20px;
+  border: solid #8bcde9 3px;
+}
