@@ -337,6 +337,10 @@ nav ul li.btn.hide i:before{
   nav ul li.items:hover:after{
     opacity: 0;
   }
+	.btn{
+    margin-right: 30%;
+    
+  }
 
   .banner_pic{
     float: right;
